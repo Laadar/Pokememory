@@ -47,6 +47,11 @@ const outerClick = (e: Event) => {
             right: 15px;
             cursor: pointer;
         }
+
+        @media screen and (max-width: 640px) {
+            padding: 20px;
+            max-width: 360px;
+        }
     }
 }
 </style>

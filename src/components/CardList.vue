@@ -76,7 +76,7 @@ const cardClicked = (card: CardType): void => {
 @media screen and (max-width: 840px) {
     .cardList {
         &.hard {
-            ::v-deep {
+            :deep {
                 .card {
                     width: 64px;
                     height: 64px;
@@ -90,13 +90,24 @@ const cardClicked = (card: CardType): void => {
 @media screen and (max-width: 640px) {
     .cardList {
 
+        &.medium {
+            grid-template-columns: repeat(6, 1fr);
+
+            :deep {
+                .card {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
         &.hard {
             grid-template-columns: repeat(8, 1fr);
 
             :deep {
                 .card {
-                    width: 42px;
-                    height: 42px;
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }

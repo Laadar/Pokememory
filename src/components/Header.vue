@@ -33,8 +33,9 @@
 
 <script setup lang="ts">
 import type { Component } from 'vue'
-import { ref, computed, markRaw } from 'vue'
+import { ref, computed, markRaw, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { useGameStore } from '@/stores/game'
 
 import Button from '@/components/Button.vue'
 import Dialog from '@/components/Dialog.vue'
@@ -42,15 +43,18 @@ import AboutUs from '@/components/Dialogs/AboutUs.vue'
 import Restart from '@/components/Dialogs/Restart.vue'
 import NewGame from '@/components/Dialogs/NewGame.vue'
 import SelectDifficulty from '@/components/Dialogs/SelectDifficulty.vue'
+import Victory from '@/components/Dialogs/Victory.vue'
 
 const router = useRouter()
 const route = useRoute()
 const showDialog = ref<boolean>(false)
 const dialogComponent = ref<Component | null>(null)
 
+const gameStore = useGameStore()
 const isHomePage = computed((): boolean => route.path === '/')
 
 const goHome = (): void => {
+    gameStore.clearGame()
     router.push('/')
 }
 
@@ -62,10 +66,21 @@ const showDialogByChoice = (name: string): void => {
         Restart: Restart,
         NewGame: NewGame,
         SelectDifficulty: SelectDifficulty,
+        Victory: Victory,
     }
     showDialog.value = true
     dialogComponent.value = markRaw(components[name as keyof Component])
 }
+
+watch(
+    () => gameStore.isVictory,
+    (victory) => {
+        if (victory) {
+            showDialog.value = true
+            showDialogByChoice('Victory')
+        }
+    }
+)
 </script>
 
 <style lang="scss" scoped>
@@ -114,6 +129,6 @@ const showDialogByChoice = (name: string): void => {
                 display: none;
             }
         }
-    }
+    }    
 }
 </style>

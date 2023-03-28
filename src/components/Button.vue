@@ -41,5 +41,9 @@ withDefaults(defineProps<ButtonProps>(), {
         transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
         filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
     }
+
+    @media screen and (max-width: 640px) {
+        width: 120px;
+    }
 }
 </style>

@@ -52,19 +52,20 @@
     }
 
     &IconItem {
-        width: 132px;
-        height: 132px;
+        width: 120px;
+        height: 120px;
+        background-size: contain;
 
         &-pika {
-            background: url('@/assets/svg/pika.svg');
+            background-image: url('@/assets/svg/pika.svg');
         }
 
         &-eevee {
-            background: url('@/assets/svg/eevee.svg');
+            background-image: url('@/assets/svg/eevee.svg');
         }
 
         &-bulba {
-            background: url('@/assets/svg/bulba.svg');
+            background-image: url('@/assets/svg/bulba.svg');
         }
     }
 }

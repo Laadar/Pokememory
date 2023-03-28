@@ -51,7 +51,7 @@ export const useGameStore = defineStore('game', () => {
     }
 
     const isVictory = computed<boolean>(() => {
-        return cardsStore.cards.every((card) => card.disabled)
+        return cardsStore.cards.length > 0 && cardsStore.cards.every((card) => card.disabled)
     })
 
     return {

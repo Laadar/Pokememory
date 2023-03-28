@@ -86,8 +86,19 @@ const start = (): void => {
                 background-image: url('@/assets/svg/difficulty_#{$diff}.svg');
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: contain;
             }
+        }
+
+        &.easy {
+            background-size: 120px 100px;
+        }
+
+        &.medium {
+            background-size: 140px 120px;
+        }
+
+        &.hard {
+            background-size: 160px 130px;
         }
     }
 
@@ -95,7 +106,18 @@ const start = (): void => {
         .difficulty {
             width: 140px;
             height: 100px;
-            background-size: 100px 80px !important;
+
+            &.easy {
+                background-size: 80px 60px;
+            }
+
+            &.medium {
+                background-size: 90px 70px;
+            }
+
+            &.hard {
+                background-size: 100px 80px;
+            }
         }
     }
 }

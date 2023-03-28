@@ -81,6 +81,7 @@ const closeDialog = (): void => {
 
             &Button {
                 margin-top: 0;
+                text-align: center;
             }
         }
     }
