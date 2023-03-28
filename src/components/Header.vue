@@ -124,6 +124,8 @@ watch(
     }
 
     @media screen and (max-width: 640px) {
+        padding-bottom: 40px;
+        
         &Logo {
             &-text {
                 display: none;

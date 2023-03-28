@@ -45,5 +45,13 @@ onBeforeUnmount(() => {
         justify-content: space-around;
         font-size: 24px;
     }
+
+    @media screen and (max-width: 640px) {
+        justify-content: space-evenly;
+
+        &Info {
+            margin-top: 20px;
+        }
+    }
 }
 </style>

@@ -21,7 +21,7 @@ defineEmits<{
 
 <style lang="scss" scoped>
 .newGame {
-    width: 340px;
+    width: 320px;
 
     &Info {
         text-align: center;

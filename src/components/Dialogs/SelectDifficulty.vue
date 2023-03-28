@@ -90,34 +90,24 @@ const start = (): void => {
         }
 
         &.easy {
-            background-size: 120px 100px;
+            background-size: 50%;
         }
 
         &.medium {
-            background-size: 140px 120px;
+            background-size: 55%;
         }
 
         &.hard {
-            background-size: 160px 130px;
+            background-size: 75%;
         }
     }
 
     @media screen and (max-width: 640px) {
+        padding: 20px;
+
         .difficulty {
             width: 140px;
             height: 100px;
-
-            &.easy {
-                background-size: 80px 60px;
-            }
-
-            &.medium {
-                background-size: 90px 70px;
-            }
-
-            &.hard {
-                background-size: 100px 80px;
-            }
         }
     }
 }

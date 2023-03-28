@@ -91,18 +91,18 @@ const cardClicked = (card: CardType): void => {
     .cardList {
 
         &.medium {
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
             :deep {
                 .card {
-                    width: 40px;
-                    height: 40px;
+                    width: 50px;
+                    height: 50px;
                 }
             }
         }
 
         &.hard {
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
             :deep {
                 .card {

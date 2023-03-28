@@ -4,7 +4,11 @@
         class="card"
         :class="{ flipped: card.flipped }"
     >
-        <img class="cardImage" :src="card.img" :alt="card.name" />
+        <img 
+            class="cardImage" 
+            :src="card.img" 
+            :alt="card.name" 
+        />
         <img
             class="pokeballImage"
             src="@/assets/svg/pokeball.svg"
@@ -38,6 +42,7 @@ defineEmits<{
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 1;
         filter: drop-shadow(-5px 5px 4px #f1d5bc);
 
         -webkit-transition: transform 0.7s

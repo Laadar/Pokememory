@@ -24,7 +24,7 @@ const restart = (): void => {
 
 <style lang="scss" scoped>
 .restart {
-    width: 340px;
+    width: 320px;
 
     &Info {
         text-align: center;

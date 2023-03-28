@@ -55,6 +55,7 @@
         width: 120px;
         height: 120px;
         background-size: contain;
+        background-repeat: no-repeat;
 
         &-pika {
             background-image: url('@/assets/svg/pika.svg');
